@@ -1,4 +1,5 @@
 " Vundle required commands
+" ---------------------------------------------------------------------------------------------------- 
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -11,12 +12,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" ----------------------------------------------------------------------------------------------------   
 
+
+" My commands
+" ---------------------------------------------------------------------------------------------------- 
+syntax on " Enables syntax highlighting in vim
+
+
+" My plugins
 " ----------------------------------------------------------------------------------------------------
-
-" My Plugins
 
 " Vim-Airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'
-
 " ---------------------------------------------------------------------------------------------------- 

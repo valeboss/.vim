@@ -1,4 +1,4 @@
-" vundle required commands
+" Vundle required commands
 " ---------------------------------------------------------------------------------------------------- 
 
 set nocompatible              " be iMproved, required
@@ -25,8 +25,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes' " Theme plugin for vim.airline
 
-" fugitive (Git wrapper)
+" fugitive (git wrapper)
 Plugin 'tpope/vim-fugitive'
+
+" gitgutter (visualisation of git diff)
+Plugin 'airblade/vim-gitgutter'
 
 " multiple cursors (multiple cursors for editing)
 Plugin 'terryma/vim-multiple-cursors'
@@ -66,7 +69,7 @@ set ttyfast " Enables smoother redrawing of the window
 " Key mappings
 " ---------------------------------------------------------------------------------------------------- 
 
-" NERTTree
+" NERDTree
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n
 
 " multiple cursors

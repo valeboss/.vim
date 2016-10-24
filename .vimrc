@@ -28,4 +28,7 @@ Plugin 'bling/vim-airline'
 
 " fugitive (Git wrapper)
 Plugin 'tpope/vim-fugitive'
+
+" solarized color scheme
+Plugin 'altercation/vim-colors-solarized'
 " ---------------------------------------------------------------------------------------------------- 

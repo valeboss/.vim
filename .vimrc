@@ -1,4 +1,4 @@
-" Vundle required commands
+" vundle required commands
 " ---------------------------------------------------------------------------------------------------- 
 
 set nocompatible              " be iMproved, required
@@ -19,7 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 " ----------------------------------------------------------------------------------------------------
 
 " powerline (statusline)
-Plugin 'powerline/powerline'
+" Plugin 'powerline/powerline'
 
 " vim-airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'

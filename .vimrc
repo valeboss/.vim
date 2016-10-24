@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My plugins
 " ----------------------------------------------------------------------------------------------------
+
 " vim-airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes' " Theme plugin for vim.airline
@@ -53,6 +54,8 @@ filetype plugin indent on    " required
 syntax on " Enables syntax highlighting
 set background=dark " Sets the background theme to dark
 colorscheme solarized " Enables the solarized colorscheme
+let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
+
 " Key mappings
 " ---------------------------------------------------------------------------------------------------- 
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n

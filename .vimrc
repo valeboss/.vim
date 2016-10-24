@@ -12,18 +12,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+call vundle#end()
 " ----------------------------------------------------------------------------------------------------   
-
-
-" My commands
-" ---------------------------------------------------------------------------------------------------- 
-syntax on " Enables syntax highlighting in vim
 
 
 " My plugins
 " ----------------------------------------------------------------------------------------------------
 
-" Vim-Airline (Lean & mean status/tabline for vim that's light as air.)
+" vim-airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'
 
 " fugitive (Git wrapper)
@@ -32,3 +28,12 @@ Plugin 'tpope/vim-fugitive'
 " solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 " ---------------------------------------------------------------------------------------------------- 
+
+
+" My commands
+" ----------------------------------------------------------------------------------------------------
+syntax on " Enables syntax highlighting
+set background=dark " Sets the background theme to dark
+colorscheme solarized " Enables the solarized colorscheme
+" ---------------------------------------------------------------------------------------------------- 
+

@@ -11,3 +11,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" ----------------------------------------------------------------------------------------------------
+
+" My Plugins
+
+" Vim-Airline (Lean & mean status/tabline for vim that's light as air.)
+Plugin 'bling/vim-airline'
+
+" ---------------------------------------------------------------------------------------------------- 

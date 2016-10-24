@@ -23,8 +23,11 @@ Plugin 'bling/vim-airline'
 " fugitive (Git wrapper)
 Plugin 'tpope/vim-fugitive'
 
-" solarized color scheme
+" solarized (color scheme)
 Plugin 'altercation/vim-colors-solarized'
+
+" NerdTree (Filesystem explorer)
+Plugin 'scrooloose/nerdtree'
 " ---------------------------------------------------------------------------------------------------- 
 
 

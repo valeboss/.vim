@@ -28,6 +28,9 @@ Plugin 'vim-airline/vim-airline-themes' " Theme plugin for vim.airline
 " fugitive (Git wrapper)
 Plugin 'tpope/vim-fugitive'
 
+" multiple cursors (multiple cursors for editing)
+Plugin 'terryma/vim-multiple-cursors'
+
 " solarized (color scheme)
 Plugin 'altercation/vim-colors-solarized'
 
@@ -58,10 +61,19 @@ syntax on " Enables syntax highlighting
 set background=dark " Sets the background theme to dark
 colorscheme solarized " Enables the solarized colorscheme
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
-set ttyfast " Enables faster drawing of the window
+set ttyfast " Enables smoother redrawing of the window
 
 " Key mappings
 " ---------------------------------------------------------------------------------------------------- 
+
+" NERTTree
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n
+
+" multiple cursors
+let g:multi_cursor_use_default_mapping=0 " turn off multiple cursors default keyboard mapping
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 " ---------------------------------------------------------------------------------------------------- 
 " End of File

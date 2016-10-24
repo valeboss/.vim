@@ -18,6 +18,9 @@ Plugin 'VundleVim/Vundle.vim'
 " My plugins
 " ----------------------------------------------------------------------------------------------------
 
+" powerline (statusline)
+Plugin 'powerline/powerline'
+
 " vim-airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes' " Theme plugin for vim.airline

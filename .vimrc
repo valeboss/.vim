@@ -58,6 +58,7 @@ syntax on " Enables syntax highlighting
 set background=dark " Sets the background theme to dark
 colorscheme solarized " Enables the solarized colorscheme
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
+set ttyfast " Enables faster drawing of the window
 
 " Key mappings
 " ---------------------------------------------------------------------------------------------------- 

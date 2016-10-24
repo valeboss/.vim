@@ -25,4 +25,7 @@ syntax on " Enables syntax highlighting in vim
 
 " Vim-Airline (Lean & mean status/tabline for vim that's light as air.)
 Plugin 'bling/vim-airline'
+
+" fugitive (Git wrapper)
+Plugin 'tpope/vim-fugitive'
 " ---------------------------------------------------------------------------------------------------- 

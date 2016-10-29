@@ -77,10 +77,16 @@ let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
 set ttyfast " Enables smoother redrawing of the window
 
 " Key mappings
-" ---------------------------------------------------------------------------------------------------- 
-
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n
+
+" Key mappings for the navigation in splitted buffers
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " multiple cursors
 let g:multi_cursor_use_default_mapping=0 " turn off multiple cursors default keyboard mapping

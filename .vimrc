@@ -62,6 +62,7 @@ filetype plugin indent on    " required
 " ----------------------------------------------------------------------------------------------------
 syntax on " Enables syntax highlighting
 set background=dark " Sets the background theme to dark
+let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
 colorscheme solarized " Enables the solarized colorscheme
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
 set ttyfast " Enables smoother redrawing of the window

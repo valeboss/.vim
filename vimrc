@@ -87,6 +87,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" Folding by hitting space
+nnoremap <space> za
 
 " multiple cursors
 let g:multi_cursor_use_default_mapping=0 " turn off multiple cursors default keyboard mapping

@@ -60,10 +60,19 @@ filetype plugin indent on    " required
 
 " My commands
 " ----------------------------------------------------------------------------------------------------
+
+" Theme and syntax color related commands
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting
-set background=dark " Sets the background theme to dark
-let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
+if has("gui_running") " Check if a vim in gui mode is running (e.g. gVim)
+	" do nothing at the moment
+else " Use fallback mode in Terminal (for compatibility)
+	set t_Co=256 " Sets the number of available terminal colors
+	let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
+endif
+set background=dark " Sets the default background theme to dark
 colorscheme solarized " Enables the solarized colorscheme
+
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
 set ttyfast " Enables smoother redrawing of the window
 

@@ -71,7 +71,7 @@ syntax on " Enables syntax highlighting
 if has("gui_running") " Check if a vim in gui mode is running (e.g. gVim)
 	colorscheme solarized " Enables the solarized colorscheme
 else " Use fallback mode in Terminal (for compatibility)
-	" set t_Co=256 " Sets the number of available terminal colors
+	set t_Co=16 " Sets the number of available terminal colors
 	" let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
 	" colorscheme zenburn
 	colorscheme solarized

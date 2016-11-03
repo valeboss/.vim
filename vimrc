@@ -68,11 +68,19 @@ filetype plugin indent on    " required
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting
 
+" Added a check for the used Terminal to setup the right amount of used colors
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+if $TERM == "xterm"
+	set t_Co=16 " Sets the number of used colors from the terminal
+elseif $TERM == "xterm-256color"
+	set t_Co=256
+	let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
+endif
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 if has("gui_running") " Check if a vim in gui mode is running (e.g. gVim)
 	colorscheme solarized " Enables the solarized colorscheme
 else " Use fallback mode in Terminal (for compatibility)
-	set t_Co=16 " Sets the number of available terminal colors
-	" let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
 	" colorscheme zenburn
 	colorscheme solarized
 endif

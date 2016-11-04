@@ -45,6 +45,9 @@ Plugin 'scrooloose/nerdtree'
 
 " SimplyFold (folding for python code)
 Plugin 'tmhedberg/simpylfold'
+
+" Autocompletion
+Plugin 'valloric/youcompleteme'
 " ---------------------------------------------------------------------------------------------------- 
 
 " All of your Plugins must be added before the following line
@@ -101,14 +104,29 @@ set foldlevelstart=20 " Sets the foldlevel for loaded buffers
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
 set ttyfast " Enables smoother redrawing of the window
 
-" Key mappings
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Plugin specific commands 
+" ----------------------------------------------------------------------------------------------------
 
 " SimplyFold
 let g:SimpylFold_docstring_preview=1
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n
+
+" multiple cursors
+let g:multi_cursor_use_default_mapping=0 " turn off multiple cursors default keyboard mapping
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1 " Closes the preview after completion
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR> " use (space+g) to go to declaration
+" ----------------------------------------------------------------------------------------------------
+
+" Key mappings
+" ----------------------------------------------------------------------------------------------------
 
 " Key mappings for the navigation in splitted buffers
 nnoremap <C-J> <C-W><C-J>
@@ -117,14 +135,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Folding by hitting space
 nnoremap <space> za
-
-" multiple cursors
-let g:multi_cursor_use_default_mapping=0 " turn off multiple cursors default keyboard mapping
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ----------------------------------------------------------------------------------------------------
 
 " File specific autocommands

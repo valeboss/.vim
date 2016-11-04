@@ -1,5 +1,5 @@
 " Vundle required commands
-" ---------------------------------------------------------------------------------------------------- 
+" ----------------------------------------------------------------------------------------------------
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -36,6 +36,7 @@ Plugin 'terryma/vim-multiple-cursors'
 
 " solarized (color scheme)
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
 
 " Zenburn color scheme for terminal use of vim
 Plugin 'jnurmine/Zenburn'
@@ -73,25 +74,31 @@ filetype plugin indent on    " required
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting
 
-" Check for the used Terminal to setup the right amount of used colors
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-if $TERM == "xterm"
-	set t_Co=16 " Sets the number of used colors from the terminal
-elseif $TERM == "xterm-256color"
-	set t_Co=256
-	let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
-endif
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-if has("gui_running") " Check if a vim in gui mode is running (e.g. gVim)
+" Check if a vim in gui mode is running (e.g. gVim)
+" ----------------------------------------------------------------------------------------------------
+if has("gui_running")
 	colorscheme solarized " Enables the solarized colorscheme
-else " Use fallback mode in Terminal (for compatibility)
-	" colorscheme zenburn
+	set background=dark " Sets the default background theme to dark
+else 
+	if $COLORTERM == "truecolor"
+		set termguicolors
+		colorscheme solarized8_dark " Enables the truecolor solarized colorscheme
+		" set Vim-specific sequences for RGB colors
+		" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+		" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	else
+		" Check for the used Terminal to setup the right amount of used colors
+		if $TERM == "xterm"
+			set t_Co=16 " Sets the number of used colors from the terminal
+		elseif $TERM == "xterm-256color"
+			set t_Co=256
+			let g:solarized_termcolors=256 " Sets the correct solarized colors in vim
+		endif
 	colorscheme solarized
+	set background=dark " Sets the default background theme to dark
+	endif
 endif
-
-set background=dark " Sets the default background theme to dark
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+" ----------------------------------------------------------------------------------------------------
 
 " Folding related commands
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 

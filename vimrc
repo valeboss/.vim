@@ -42,8 +42,10 @@ Plugin 'jnurmine/Zenburn'
 
 " NerdTree (Filesystem explorer)
 Plugin 'scrooloose/nerdtree'
-" ---------------------------------------------------------------------------------------------------- 
 
+" SimplyFold (folding for python code)
+Plugin 'tmhedberg/simpylfold'
+" ---------------------------------------------------------------------------------------------------- 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

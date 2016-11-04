@@ -70,7 +70,7 @@ filetype plugin indent on    " required
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting
 
-" Added a check for the used Terminal to setup the right amount of used colors
+" Check for the used Terminal to setup the right amount of used colors
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if $TERM == "xterm"
 	set t_Co=16 " Sets the number of used colors from the terminal
@@ -88,6 +88,15 @@ else " Use fallback mode in Terminal (for compatibility)
 endif
 
 set background=dark " Sets the default background theme to dark
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+" Folding related commands
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+" Enable folding
+" set foldmethod=indent
+set foldlevelstart=20 " Sets the foldlevel for loaded buffers
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 let NERDTreeShowHidden=1 " Enables NERDTree to always show hidden files
 set ttyfast " Enables smoother redrawing of the window

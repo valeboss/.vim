@@ -74,6 +74,9 @@ filetype plugin indent on    " required
 set splitbelow " opens the new buffer below the current
 set splitright " opens the new buffer on the right side of the current
 
+" Line numbering
+set number " display line numbers
+
 " Theme and syntax color related commands
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting

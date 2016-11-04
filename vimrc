@@ -103,7 +103,10 @@ set ttyfast " Enables smoother redrawing of the window
 
 " Key mappings
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
+" SimplyFold
+let g:SimpylFold_docstring_preview=1
+
 " NERDTree
 map <C-n> :NERDTreeToggle<CR> " Opens a NERDTree with Ctrl+n
 
@@ -121,5 +124,6 @@ let g:multi_cursor_next_key='<C-m>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ---------------------------------------------------------------------------------------------------- 
 " End of File

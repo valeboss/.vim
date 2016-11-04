@@ -70,6 +70,10 @@ filetype plugin indent on    " required
 " My commands
 " ----------------------------------------------------------------------------------------------------
 
+" Split settings
+set splitbelow " opens the new buffer below the current
+set splitright " opens the new buffer on the right side of the current
+
 " Theme and syntax color related commands
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 syntax on " Enables syntax highlighting

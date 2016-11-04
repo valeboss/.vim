@@ -15,3 +15,6 @@ To make Vim (only for Vim versions < 7.4) use the .vimrc file contained in the .
 ```
 ln -s .vim/vimrc .vimrc
 ```
+
+## Install YouCompleteMe
+For installation instructions click [here](https://github.com/Valloric/YouCompleteMe "YouCompleteMe GitHub Repository").

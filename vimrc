@@ -49,6 +49,9 @@ Plugin 'tmhedberg/simpylfold'
 
 " Autocompletion
 Plugin 'valloric/youcompleteme'
+
+" Syntastic (syntax checking)
+Plugin 'scrooloose/syntastic'
 " ---------------------------------------------------------------------------------------------------- 
 
 " All of your Plugins must be added before the following line
@@ -137,6 +140,16 @@ let g:multi_cursor_quit_key='<Esc>'
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion=1 " Closes the preview after completion
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR> " use (space+g) to go to declaration
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 " ----------------------------------------------------------------------------------------------------
 
 " Key mappings

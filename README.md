@@ -18,3 +18,6 @@ ln -s .vim/vimrc .vimrc
 
 ## Install YouCompleteMe
 For installation instructions click [here](https://github.com/Valloric/YouCompleteMe "YouCompleteMe GitHub Repository").
+
+## Syntastic syntax checking
+For further instructions on enabling syntax checking by Syntastic click [here](https://github.com/vim-syntastic/syntastic "Syntastic GitHub Repository").
